@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="runRea.js"></script>
+    <title>test</title>
+</head>
+
+<body>
+    <div style="text-align: start; width: 500px;margin: 0 auto; line-height: 28px;">
+    <div id="instruction">
+        <p>
+            请在下方方框中输入你的实验编号和手机号码，为了保证你的实验信息前后对应，请务必正确填写信息并和问卷中的信息保持一致，谢谢！
+            填写完毕后请按继续按钮进入实验部分
+        </p>
+    </div>
+
+    <iframe name ="server" style ="display:none;" src=' '> </iframe> 
+    <form action="/cgi-bin/runRea.py" method="GET" target="server" style="display: flex;" autocomplete="off">
+        <input type="text" placeholder="您的实验编号" id="testID" name="testID">
+        <input type="text" placeholder="11位手机号码" id="phone" name="phone">
+        <input type="text" id="contact" name="contact" style ="display:none;" value=“0”>
+        <input type="submit" value="继续" id="continue" value="0" display=""/>
+    </form>
+    <p id="errorTips"></p>
+    </div>
+</body>
+
+</html>
